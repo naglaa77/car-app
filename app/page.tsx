@@ -1,7 +1,11 @@
 import Image from 'next/image'
-import {CustomFilter, Hero, SearchBar} from "@/components";
+import {CustomFilter, Hero, SearchBar,CarCard} from "@/components";
+import {fetchCars} from "@/utils";
 
-export default function Home() {
+export default async function Home() {
+    const allCars = await fetchCars()
+    // verify if allCars is empty
+    const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars // if any of these is true so data is empty
   return (
     <main className="overflow-hidden">
      <Hero/>
@@ -20,6 +24,18 @@ export default function Home() {
                 <CustomFilter title="years"/>
              </div>
          </div>
+         {!isDataEmpty ? (
+             <section>
+                 {allCars?.map((car) =>
+                     <CarCard car={car}/>
+                 )}
+             </section>
+         ): (
+             <div>
+                 <h2>Oops, no result</h2>
+             </div>
+
+         )}
      </div>
     </main>
   )

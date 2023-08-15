@@ -6,6 +6,8 @@ import Footer from "./Footer";
 import SearchBar from "./SearchBar";
 import CustomFilter from './CustomFilter'
 import SearchManufacturer from './SearchManufacturer' // can also write like that => import {SearchManufacturer} from './'
+import CarCard from "@/components/CarCard";
+import CarDetails from "@/components/CarCard";
 export {
     Hero,
     CustomButton,
@@ -13,5 +15,7 @@ export {
     Footer,
     SearchBar,
     CustomFilter,
-    SearchManufacturer
+    SearchManufacturer,
+    CarCard,
+    CarDetails
 }
