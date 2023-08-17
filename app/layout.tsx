@@ -1,23 +1,23 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import {Footer, Navbar} from "@/components";
+import "./globals.css";
+import type { Metadata } from "next";
+import { Footer, Navbar } from "@/components";
 export const metadata: Metadata = {
-  title: 'Car Hub',
-  description: 'Discover the best cars in world',
-}
+  title: "Car Hub",
+  description: "Discover the best cars in world",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className="reltive" >
-      <Navbar/>
+      <body className="reltive">
+        <Navbar />
         {children}
-      <Footer/>
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
