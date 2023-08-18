@@ -8,6 +8,7 @@ import CustomFilter from "./CustomFilter";
 import SearchManufacturer from "./SearchManufacturer"; // can also write like that => import {SearchManufacturer} from './'
 import CarCard from "@/components/CarCard";
 import CarDetails from "@/components/CarCard";
+import ShowMore from "@/components/ShowMore"
 export {
   Hero,
   CustomButton,
@@ -18,4 +19,5 @@ export {
   SearchManufacturer,
   CarCard,
   CarDetails,
+  ShowMore
 };
